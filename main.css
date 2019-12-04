@@ -1,0 +1,60 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    padding: 30px;
+}
+
+.accordion-container {
+    padding: 10px;
+    margin: 20px;
+}
+
+.accordion-head {
+    border: 1px solid black;
+    padding: 10px;
+    width: fit-content;
+}
+
+.accordion-list {
+    overflow: hidden;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    max-height: 0;
+}
+
+.expand {
+    animation-name: expand;
+}
+
+.collapse {
+    animation-name: collapse;
+    animation-duration: 1s;
+}
+
+@keyframes expand {
+    from {
+        max-height: 0px;
+    }
+    to {
+        max-height: 60px;
+    }
+}
+
+@keyframes collapse {
+    from {
+        max-height: 60px;
+    }
+    to {
+        max-height: 0px;
+    }
+}
